@@ -1,7 +1,0 @@
-.container{
-    background-color: black;
-}
-.carousel-inner img {
-    max-width: 100%;  /* Define a largura máxima como 100% */
-    height: auto;     /* Mantém a proporção original da imagem */
-}
