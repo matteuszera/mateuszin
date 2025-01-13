@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Kanban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Quadro de Tarefas Boladão</h1>
+    <div class="kanban-board">
+        <div class="kanban-column" id="todo">
+            <h2>Tarefas Manhã</h2>
+            <div class="task-list"></div>
+            <button onclick="openTaskModal('todo')">Adicionar Tarefa</button>
+        </div>
+        <div class="kanban-column" id="in-progress">
+            <h2>Tarefas tarde</h2>
+            <div class="task-list"></div>
+            <button onclick="openTaskModal('in-progress')">Adicionar Tarefa</button>
+        </div>
+        <div class="kanban-column" id="done">
+            <h2>Tarefas Noite</h2>
+            <div class="task-list"></div>
+            <button onclick="openTaskModal('done')">Adicionar Tarefa</button>
+        </div>
+    </div>
+
+    <!-- adicionar tarefa é aquiii -->
+    <div class="modal" id="taskModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeTaskModal()">&times;</span>
+            <h2 id="modalTitle">Adicionar Tarefa</h2>
+            <input type="text" id="taskTitle" placeholder="Título da Tarefa">
+            <textarea id="taskDescription" placeholder="Descrição da Tarefa"></textarea>
+            <button onclick="saveTask()">Salvar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
